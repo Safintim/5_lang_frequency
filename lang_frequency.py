@@ -16,9 +16,9 @@ def load_data(filepath):
         return file.read()
 
 
-def get_most_frequent_words(text):
+def get_most_frequent_words(text, count=10):
     text = re.sub(r'[^\s\w]', '', text.lower())
-    return Counter(text.split()).most_common(10)
+    return Counter(text.split()).most_common(count)
 
 
 def print_most_frequent_words(frequent_words):
