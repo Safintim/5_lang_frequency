@@ -22,7 +22,7 @@ def get_most_frequent_words(text):
 
 
 def print_most_frequent_words(frequent_words):
-    header = ['words', 'frequent']
+    header = ['words', 'frequency']
     string = tt.to_string(
         frequent_words,
         header=header,

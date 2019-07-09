@@ -25,7 +25,7 @@ python3 lang_frequency <path_to_file>
 ```sh
 python3 lang_frequency.py hamlet.txt
 ┌───────┬──────────┐
-│ words │ frequent │
+│ words │frequency │
 ┝━━━━━━━┿━━━━━━━━━━┥
 │  the  │   1090   │
 ├───────┼──────────┤
