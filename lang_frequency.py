@@ -9,7 +9,8 @@ def create_parser():
 
 
 def load_data(filepath):
-    pass
+    with open(filepath, 'r') as file:
+        return file.read()
 
 
 def get_most_frequent_words(text):
@@ -23,7 +24,7 @@ def main():
     if not namespace.file:
         exit('Укажите путь к файлу.')
     if not os.path.isfile(namespace.file):
-        exit('Такого файла не существует')
+        exit('Такого файла не существует.')
 
     text = load_data(namespace.file)
     get_most_frequent_words(text)
