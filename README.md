@@ -1,7 +1,54 @@
-# Frequency Analysis of Words
+# Частотный анализ слов
 
-[TODO. There will be project description]
+## Описание
 
-# Project Goals
+Скипт, который считает сколько раз встречаются слова в тексте.
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+## Требования
+
+*Python3.5*
+
+## Как установить
+
+```sh
+git clone https://github.com/Safintim/5_lang_frequency.git
+cd 5_lang_frequency
+pip install -r requirements.txt
+```
+
+## Как запустить
+
+python3 lang_frequency <path_to_file>
+
+## Пример запуска
+
+```sh
+lang_frequency.py hamlet.txt
+┌───────┬──────────┐
+│ words │ frequent │
+┝━━━━━━━┿━━━━━━━━━━┥
+│  the  │   1090   │
+├───────┼──────────┤
+│  and  │   964    │
+├───────┼──────────┤
+│  to   │   742    │
+├───────┼──────────┤
+│  of   │   675    │
+├───────┼──────────┤
+│   i   │   577    │
+├───────┼──────────┤
+│   a   │   558    │
+├───────┼──────────┤
+│  you  │   554    │
+├───────┼──────────┤
+│  my   │   520    │
+├───────┼──────────┤
+│  in   │   434    │
+├───────┼──────────┤
+│  it   │   419    │
+└───────┴──────────┘
+```
+
+## Цель проекта
+
+Код создан в учебных целях. В рамках учебного курса по веб-разработке  - [DEVMAN.org](https://devman.org)
