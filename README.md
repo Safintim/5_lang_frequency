@@ -18,7 +18,9 @@ pip install -r requirements.txt
 
 ## Как запустить
 
+```sh
 python3 lang_frequency <path_to_file>
+```
 
 ## Пример запуска
 
