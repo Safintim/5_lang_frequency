@@ -2,8 +2,7 @@ import re
 import os.path
 import argparse
 from collections import Counter
-# from pprint import pprint
-# import termtables as tt
+import termtables as tt
 
 
 def create_parser():
@@ -22,10 +21,14 @@ def get_most_frequent_words(text):
     return Counter(text.split()).most_common(10)
 
 
-# def print_most_frequent_words(frequent_words):
-#     for word, frequent in frequent_words:
-#         print('{}{:>15}'.format(word, frequent))
-
+def print_most_frequent_words(frequent_words):
+    header = ['words', 'frequent']
+    string = tt.to_string(
+        frequent_words,
+        header=header,
+        style=tt.styles.thin_thick,
+        alignment='c')
+    print(string)
 
 
 def main():
