@@ -23,7 +23,7 @@ python3 lang_frequency <path_to_file>
 ## Пример запуска
 
 ```sh
-lang_frequency.py hamlet.txt
+python3 lang_frequency.py hamlet.txt
 ┌───────┬──────────┐
 │ words │ frequent │
 ┝━━━━━━━┿━━━━━━━━━━┥
