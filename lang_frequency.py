@@ -7,8 +7,14 @@ import termtables as tt
 
 def create_parser():
     parser = argparse.ArgumentParser(prefix_chars='-+/')
-    parser.add_argument('file', nargs='?', default=False, help='Path to json file')
+    parser.add_argument('file', type=is_exist, help='Path to file')
     return parser
+
+
+def is_exist(filepath):
+    if os.path.isfile(filepath):
+        return filepath
+    raise argparse.ArgumentTypeError('file not found')
 
 
 def load_data(filepath):
@@ -34,12 +40,6 @@ def print_most_frequent_words(frequent_words):
 def main():
     parser = create_parser()
     namespace = parser.parse_args()
-
-    if not namespace.file:
-        exit('Укажите путь к файлу.')
-    if not os.path.isfile(namespace.file):
-        exit('Такого файла не существует.')
-
     text = load_data(namespace.file)
     print_most_frequent_words(get_most_frequent_words(text))
 
